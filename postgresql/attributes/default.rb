@@ -180,6 +180,7 @@ default['postgresql']['pg_hba'] = [
 ]
 
 default['postgresql']['password'] = Hash.new
+default['postgresql']['password']['postgres'] = "123"
 
 default['postgresql']['enable_pitti_ppa'] = false
 default['postgresql']['enable_pgdg_yum'] = false
