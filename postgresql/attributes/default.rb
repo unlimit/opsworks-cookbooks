@@ -140,7 +140,7 @@ end
 # merge/precedence order during the Chef run.
 case node['platform_family']
 when 'debian'
-  default['postgresql']['config']['data_directory'] = "/mnt/postgresql/#{node['postgresql']['version']}/data"
+  default['postgresql']['config']['data_directory'] = "/var/lib/postgresql/#{node['postgresql']['version']}/main"
   default['postgresql']['config']['hba_file'] = "/etc/postgresql/#{node['postgresql']['version']}/main/pg_hba.conf"
   default['postgresql']['config']['ident_file'] = "/etc/postgresql/#{node['postgresql']['version']}/main/pg_ident.conf"
   default['postgresql']['config']['external_pid_file'] = "/var/run/postgresql/#{node['postgresql']['version']}-main.pid"
